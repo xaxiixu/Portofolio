@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 100%;
+        display: block;
+        padding-bottom: 30px;       
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+
+/* section 1 */
+#navigasi-bar {
+    background-color: #023121;
+}
+/* navigasi bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    animation: fadeInDown 1s forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+a{
+    color: beige;
+    font-size: 20px;
+    text-decoration: none;
+    text-decoration-color: aquamarine;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.menu {
+    font-weight: bold;
+}
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: beige;
+    animation: fadeInDown 1s forwards;
+}
+/* end of logo */
+
+/* hamburger menu */
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+/* hamburger menu out */
+
+/* end of navigasi bar */
+
+
+/* content 1 */
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.hero {
+    height: 720px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-left img {
+    height: 60%;
+    width: 70%;
+    animation: moveText 2s forwards;
+}
+
+.hero-right {
+    font-size: 23px;
+    color: beige;
+    animation: moveText 2s forwards;
+}
+
+@keyframes moveText {
+    0% {
+      transform: translateX(-20%);
+    }
+    100% {
+      transform: translateX(1%);
+    }
+  }
+  
+/* end of centent 1 */
+/* end of section 1 */
+
+
+
+/* section 2 */
+#aboutme {
+    padding: 5rem;
+    background-color: beige;
+    color: black;
+}
+
+/* content 1 */
+.deskripsi {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 3s; /* Smooth transition */
+}
+
+.fade-in {
+    opacity: 1; /* Fade-in effect */
+  }
+
+.deskripsi1 {
+    padding: 10px;
+}
+/* end of content 1 */
+/* end of section 2 */
+
+
+
+/* section 3 */
+#assignment {
+    background-color: #023121;
+    padding: 3rem;
+   }
+/* content 1 */
+.title-s3 {
+    color: beige;
+    margin-bottom: 4rem;
+}
+/* end of content 1 */
+
+/* content 2 */
+.assignment-container {
+  justify-content: center;  
+  display: flex;
+}
+
+/* Gaya grid saat dikecilkan */
+@media (max-width: 768px) {
+    .assignment-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+  }
+  
+  /* Gaya flex saat diperbesar */
+  @media (min-width: 768px) {
+    .assignment-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box {
+      flex: 1 1 calc(50% - 10px);
+    }
+  }
+
+.assignment-1 {
+    row-gap: 2rem;
+}
+
+.assignment-link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.assignment-img {
+    filter: grayscale();
+    transition: filter .5s, transform .5s;
+    height: 250px;
+    width: 400px;
+}
+
+.assignment-link:hover .assignment-img {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.assignment-1-text {
+    color: beige;
+    padding-bottom: 10px;
+}
+
+.assignment-2-text {
+    color: beige;
+}
+
+.assignment-2-text {
+    padding-bottom: 10px;
+}
+
+
+
+/* end of content 2 */
+
+/* content 3 */
+
+/* end of section 3 */
+
+/* section 4 */
+#footer {
+    padding: 5rem;
+}
+/* footer */
+.tittle-footer {
+    color: black;
+}
+/* footer end */
+/* end of section 4 */
+
+
+/* page tugas 1 */
+.assignment-1-img img{
+    width: 60%;
+    height: 55%;
+    padding-bottom: 2rem;
+}
+
+.title {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    font-weight: bold;
+    font-size: 30px;
+    color: beige;
+}
+
+.assignment-1-br-penjelasan {
+    padding-bottom: 5rem;
+    color: whitesmoke;
+    font-size: 20px;
+}
+/* page tugas 1 end */
+
+/* tugas page 2 */
+.assignment-2-img img {
+    height: 40%;
+    width: 50%;
+}
+/* tugasa page 2 end */
+  
+
+/* page 3 */
+.assignment-3-img img {
+    height: 40%;
+    width: 50%;
+    padding-bottom: 2rem;
+}
